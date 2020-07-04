@@ -12,14 +12,9 @@ class Algorien:
 		pass
 
 	@staticmethod
-	def split_char(x):
-		"""method to split a string for each caracters"""
-		return [char for char in x]
-
-	@staticmethod
 	def split_incr(a):
-		"""method to create an list with spliten caracters and add previous caracters for each loop"""
-		arr = Algorien.split_char(a.lower())
+		"""method to create an list with split characters and add previous characters for each loop"""
+		arr = list(a.lower())
 		final_array = []
 		item = ''
 		"""
@@ -29,9 +24,9 @@ class Algorien:
 		also, to avoid space problem, add a condition
 		"""
 		for x in range(2):
-			for char in arr:
-				if(char != ' '):
-					item += char
+			for character in arr:
+				if(character != ' '):
+					item += character
 					final_array.append(item)
 			# reinitialize actual item to ''
 			# and reverse "arr" list
@@ -48,8 +43,8 @@ class Algorien:
 			Algorien.split_incr(reference)
 		]
 		# so check if each char in word array is present in reference array
-		for char in result[0]:
-			if(char in result[1]):
+		for character in result[0]:
+			if(character in result[1]):
 				pct += 1
 		pct /= len(result[1])
 
